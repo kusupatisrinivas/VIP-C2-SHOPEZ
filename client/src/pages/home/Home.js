@@ -67,8 +67,8 @@ export default function Home() {
       {/* Premium Hero Section */}
       <div className="container" style={{ marginTop: '24px' }}>
         <div className="premium-hero-container">
-          {/* Left Side Info */}
-          <div className="hero-left-col">
+          {/* Full-width content area */}
+          <div className="hero-content-area">
             <span className="hero-badge">New Arrivals</span>
             <h1 className="hero-heading">Shop Smarter with ShopEZ</h1>
             <p className="hero-subtitle">Explore the best curated collection of lifestyle products.</p>
@@ -102,56 +102,6 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
                 </svg>
                 <span>24/7 Support</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Side Visuals (Product-focused only, no models/humans) */}
-          <div className="hero-right-col">
-            <div className="hero-gradient-canvas">
-              {/* Blur blobs */}
-              <div className="blur-blob blob-1"></div>
-              <div className="blur-blob blob-2"></div>
-              
-              {/* Floating Product Cards */}
-              <div className="floating-card float-shoes" onClick={() => nav('/products?category=Shoes')}>
-                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=120&q=80" alt="Shoes" />
-                <div className="float-card-info">
-                  <span className="float-title">Nike Sneaker</span>
-                  <span className="float-price">₹2,499</span>
-                </div>
-              </div>
-
-              <div className="floating-card float-sunglasses" onClick={() => nav('/products?category=Sunglasses')}>
-                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=120&q=80" alt="Sunglasses" />
-                <div className="float-card-info">
-                  <span className="float-title">Sunglasses</span>
-                  <span className="float-price">₹1,299</span>
-                </div>
-              </div>
-
-              <div className="floating-card float-watch" onClick={() => nav('/products?category=Electronics')}>
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=120&q=80" alt="Smart Watch" />
-                <div className="float-card-info">
-                  <span className="float-title">Smart Watch</span>
-                  <span className="float-price">₹3,999</span>
-                </div>
-              </div>
-
-              <div className="floating-card float-headphones" onClick={() => nav('/products?category=Electronics')}>
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=120&q=80" alt="Headphones" />
-                <div className="float-card-info">
-                  <span className="float-title">Headphones</span>
-                  <span className="float-price">₹4,999</span>
-                </div>
-              </div>
-
-              <div className="floating-card float-electronics" onClick={() => nav('/products?category=Electronics')}>
-                <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=120&q=80" alt="Electronics" />
-                <div className="float-card-info">
-                  <span className="float-title">Earbuds</span>
-                  <span className="float-price">₹1,899</span>
-                </div>
               </div>
             </div>
           </div>
