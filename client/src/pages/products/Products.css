@@ -54,15 +54,29 @@
 
 .product-card {
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 16px;
   overflow: hidden;
   cursor: pointer;
-  transition: box-shadow 0.15s;
+  background: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02), 0 2px 4px -1px rgba(0,0,0,0.01);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.product-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.07); }
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05), 0 10px 10px -5px rgba(0,0,0,0.02);
+}
 
-.product-img-wrap { position: relative; }
-.product-img-wrap img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.product-img-wrap { position: relative; overflow: hidden; }
+.product-img-wrap img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.product-card:hover .product-img-wrap img {
+  transform: scale(1.04);
+}
 
 .discount-badge {
   position: absolute; top: 8px; left: 8px;

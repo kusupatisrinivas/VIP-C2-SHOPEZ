@@ -14,7 +14,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="container nav-inner">
 
-        <Link to="/" className="nav-logo">ShopEZ</Link>
+        <Link to="/" className="nav-logo">Shop<span className="logo-accent">EZ</span></Link>
 
         <div className="nav-links">
           <NavLink to="/"         className="nav-link">Home</NavLink>

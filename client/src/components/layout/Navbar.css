@@ -4,13 +4,14 @@
   z-index: 100;
   background: #fff;
   border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
 }
 
 .nav-inner {
   display: flex;
   align-items: center;
-  height: 56px;
-  gap: 24px;
+  height: 64px;
+  gap: 32px;
 }
 
 .nav-logo {
@@ -18,6 +19,11 @@
   font-weight: 700;
   letter-spacing: -0.03em;
   flex-shrink: 0;
+  color: #111827;
+}
+
+.nav-logo .logo-accent {
+  color: #2563EB;
 }
 
 .nav-links {
@@ -32,9 +38,23 @@
   border-radius: 5px;
   font-size: 13px;
   color: var(--muted);
-  transition: all 0.15s;
+  transition: color 0.2s, background-color 0.2s;
+  position: relative;
 }
-.nav-link:hover { color: var(--text); background: var(--bg2); }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2.5px;
+  background: #2563EB;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: center;
+}
+.nav-link:hover { color: #2563EB; background: var(--bg2); }
 
 .nav-right {
   display: flex;
@@ -113,7 +133,7 @@
 }
 .nav-dropdown-item:hover {
   background: var(--bg2);
-  color: var(--text);
+  color: #2563EB;
 }
 @keyframes dropdownFadeIn {
   from { opacity: 0; transform: translateY(8px); }
@@ -123,18 +143,10 @@
 .nav-link.active {
   color: #2563EB;
   font-weight: 600;
-  position: relative;
 }
 
 .nav-link.active::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  background: #2563EB;
-  border-radius: 2px;
+  transform: scaleX(1);
 }
 
 /* Blue Hover */
