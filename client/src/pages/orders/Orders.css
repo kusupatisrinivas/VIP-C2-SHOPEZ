@@ -1,0 +1,88 @@
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 20px;
+  align-items: start;
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.payment-options { display: flex; flex-direction: column; gap: 8px; }
+
+.payment-opt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: border-color 0.15s;
+}
+.payment-opt.active { border-color: var(--text); background: var(--bg2); }
+.payment-opt input { accent-color: var(--text); }
+
+.order-preview { position: sticky; top: 72px; }
+
+.preview-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+.preview-row:last-of-type { border-bottom: none; }
+.preview-img { width: 48px; height: 48px; object-fit: cover; border-radius: 5px; flex-shrink: 0; }
+
+/* Orders list */
+.orders-list { display: flex; flex-direction: column; gap: 12px; }
+
+.order-card { }
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.order-id { font-size: 13px; font-weight: 600; }
+.order-date { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+.order-item-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 12px;
+}
+
+.order-img { width: 60px; height: 60px; object-fit: cover; border-radius: 6px; flex-shrink: 0; }
+
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .checkout-layout { grid-template-columns: 1fr; }
+  .form-grid { grid-template-columns: 1fr; }
+  .order-preview { position: static; }
+}
